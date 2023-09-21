@@ -1,0 +1,13 @@
+Collections is set of pre defined classes and interfaces
+
+Iterable->Collection->
+                    1. List     ->ArrayList, LinkedList, Vector, Stack
+                    2. Queue    ->Class PriorityQueue implements Queue
+                                ->Interface Deque extends, ArrayDequeue implements Queue and Deque
+                    3. Set      ->Classes HasSet and LinkedHasSet implements Set
+                                ->Interface SortedSet extends Set, TreeSet implements SortedSet
+
+Map-> Sorted map interface extends Map
+                                Tree Map implements Sorted Map
+                                HashMap implements Map, LinkedHasMap Class extends Hash Map
+
