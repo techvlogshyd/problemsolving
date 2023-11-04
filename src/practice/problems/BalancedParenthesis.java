@@ -52,6 +52,7 @@ public class BalancedParenthesis {
         return (stack.isEmpty());
     }
 public static List<String> checkBalancedParenthesis(List<String> input){
+       // Stack<String> stack1 = new Stack<>();
     List<String> result=new ArrayList<>();
     for (int i=0;i<input.size();i++)
     {
