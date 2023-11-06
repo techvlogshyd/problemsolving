@@ -1,0 +1,62 @@
+String Problems
+1) Write a Java program to find the duplicate words and their number of occurrences in a string?
+2) Write a Java program to count the number of words in a string?
+3) Write a Java program to count the total number of occurrences of a given character in a string without using any loop?
+4) Write a Java program to reverse a string?
+5) Write a Java program to count the number of occurrences of each character in a string?
+6) Write a Java program to remove all white spaces from a string?
+7) Write a Java program to find duplicate characters in a string?
+8) Write a Java program to check whether one string is a rotation of another?
+9) Write a Java program to check whether two strings are anagram or not?
+10) Write a Java program to reverse a given string with preserving the position of spaces?
+11) Write a Java program to reverse each word of a given string?
+12) How do you convert string to integer and integer to string in Java?
+13) Write a Java program to find the percentage of uppercase letters, lowercase letters, digits and special characters in a given string?
+14) Write a Java program to prove that strings are immutable in Java?
+15) How do you find longest substring without repeating characters in the given string?
+16) How do you swap two string variables without using third or temp variable in Java?
+17) Write a Java program to find all permutations of a string?
+18) How do you find first repeated and non-repeated character in the given string in Java?
+19) Write a Java program to append a given string to a text file?
+20) How do you find the number of characters, words and lines in the given text file in Java?
+21) How do you find the most repeated word in a text file in Java?
+22) How to sort a text file in Java?
+23) Palindrome Programs In Java
+24) How to reverse a sentence word by word in Java?
+25) How to remove all vowels from a string in Java?
+26) How to replace a specific string in a text file?
+27) Java program to print all sub strings of a string.
+28) Program to print common characters between two strings in alphabetical order.
+29) Most repetitive character in a string
+
+Array Problems
+1) Write a Java program to find duplicate elements in an array?
+2) Write a Java program to find second largest element in an array of integers?
+3) Write a Java program to check the equality of two arrays?
+4) Write a Java program to find all pairs of elements in an integer array whose sum is equal to a given number?
+5) Write a Java program to find continuous sub array whose sum is equal to a given number?
+6) Write a Java program to find the intersection of two arrays?
+7) Write a Java program to separate zeros from non-zeros in an integer array?
+8) Write a Java program to find all the leaders in an integer array?
+9) Write a Java program to find a missing number in an integer array?
+10) Write a Java program to convert an array to ArrayList and an ArrayList to array?
+11) Write a Java program to count occurrences of each element in an array?
+12) Write a Java program to reverse an array without using an additional array?
+13) Write a Java program to remove duplicate elements from an array?
+14) Write a Java program to find union and intersection of multiple arrays?
+15) Write a Java program to find the most frequent element in an array?
+16) Write a Java program to find the minimum absolute difference between any two elements of the given array?
+17) How to sort array elements by frequency in Java?
+18) How to merge two sorted or unsorted arrays into single sorted array without duplicates in Java?
+19) How to merge two unsorted arrays in sorted order in Java?
+20) How to merge two sorted arrays in Java?
+21) Write a Java program to find smallest and second smallest element in an integer array?
+22) Write a Java program to find contiguous sub array with maximum sum?
+23) Write a Java program which prints all contiguous sub arrays with given sum?
+24) How to sort an array of 0s and 1s in Java?
+25) How to sort an array of 0s, 1s and 2s in Java?
+26) Write a Java program which finds triplets in the given array whose sum is equal to given number?
+27) Write a Java program to find array triplets such that sum of first two elements equals the third element?
+28) Array Rotation Program In Java
+29) Array Element Removal Programs
+30) Arrays.deepToString() method example.

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 public class TopFrequencyOfWords {
 
 
@@ -21,32 +22,34 @@ String largeTextDocument = "The quick brown fox jumps over the lazy dog. " +
 */
 
 
-
     static void findFrequency(String largeTextDocument) {
 
         String[] words = largeTextDocument.split(" ");
         String firstWord = "";
         String secondWord = "";
         String thirdWord = "";
-        int firstWordCount = Integer.MIN_VALUE;;
-        int secondWordCount = Integer.MIN_VALUE;;
-        int thirdWordCount = Integer.MIN_VALUE;;
+        int firstWordCount = Integer.MIN_VALUE;
+        ;
+        int secondWordCount = Integer.MIN_VALUE;
+        ;
+        int thirdWordCount = Integer.MIN_VALUE;
+        ;
 
-        if(largeTextDocument.isEmpty() || words.length <= 1){
+        if (largeTextDocument.isEmpty() || words.length <= 1) {
             System.out.print("No repeated words");
+            return;
         }
         Map<String, Integer> frequency = new HashMap<>();
-        for(String word : words){
-            if(word.equalsIgnoreCase("the") || word.equalsIgnoreCase("and") || word.equalsIgnoreCase("is")){
+        for (String word : words) {
+            if (word.equalsIgnoreCase("the") || word.equalsIgnoreCase("and") || word.equalsIgnoreCase("is")) {
                 continue;
             }
-            if(!frequency.containsKey(word)){
+            if (!frequency.containsKey(word)) {
                 frequency.put(word, 1);
-            }
-            else{
+            } else {
                 frequency.put(word, frequency.get(word) + 1);
-                }
             }
+        }
         for (Map.Entry<String, Integer> entry : frequency.entrySet()) {
             if (entry.getValue() > firstWordCount) {
                 thirdWordCount = secondWordCount;
@@ -65,35 +68,27 @@ String largeTextDocument = "The quick brown fox jumps over the lazy dog. " +
                 thirdWord = entry.getKey();
             }
         }
-        System.out.println(firstWord+" frequency is "+ firstWordCount);
-        System.out.println(secondWord+" frequency is "+ secondWordCount);
-        System.out.println(thirdWord+" frequency is "+ thirdWordCount);
+        System.out.println(firstWord + " frequency is " + firstWordCount);
+        System.out.println(secondWord + " frequency is " + secondWordCount);
+        System.out.println(thirdWord + " frequency is " + thirdWordCount);
     }
 
     static void findFrequency2(String largeTextDocument) {
-
         String[] words = largeTextDocument.split(" ");
-
-
-        if(largeTextDocument.isEmpty() || words.length <= 1){
+        if (largeTextDocument.isEmpty() || words.length <= 1) {
             System.out.print("No repeated words");
         }
         Map<String, Integer> frequency = new HashMap<>();
-        for(String word : words){
-            if(word.equalsIgnoreCase("the") || word.equalsIgnoreCase("and") || word.equalsIgnoreCase("is")){
+        for (String word : words) {
+            if (word.equalsIgnoreCase("the") || word.equalsIgnoreCase("and") || word.equalsIgnoreCase("is")) {
                 continue;
             }
-            if(!frequency.containsKey(word)){
+            if (!frequency.containsKey(word)) {
                 frequency.put(word, 1);
-            }
-            else{
+            } else {
                 frequency.put(word, frequency.get(word) + 1);
             }
-
-
-
         }
-
         List<Map.Entry<String, Integer>> sortedWordFrequency = new ArrayList<>(frequency.entrySet());
         sortedWordFrequency.sort((entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue()));
         System.out.println("Top 3 most frequent words:");
@@ -108,15 +103,13 @@ String largeTextDocument = "The quick brown fox jumps over the lazy dog. " +
     }
 
 
-
-
     public static void main(String[] args) {
         String largeTextDocument = "The quick quick quick quick brown fox jumps over the lazy dog. " +
                 "In a world where technology is rapidly advancing, " +
                 "data science and artificial intelligence are becoming crucial " +
                 "for solving complex problems. " +
                 "The future of AI is exciting, and we should embrace it.";
-       // String largeTextDocument2 = "test1, test2, test3, test4,test1, test2, test3, test4, test1, test2, test3, test4, test1, test2, test3, test1, test2, test1";
+        // String largeTextDocument2 = "test1, test2, test3, test4,test1, test2, test3, test4, test1, test2, test3, test4, test1, test2, test3, test1, test2, test1";
         findFrequency(largeTextDocument);
         findFrequency2(largeTextDocument);
         String largeTextDocument2 = "test1 test2 test3 test4 test1 test2 test3 test1 test2 test1 test2 test2 test3 test3 test3 test3";
