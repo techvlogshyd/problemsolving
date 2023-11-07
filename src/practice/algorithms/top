@@ -1,0 +1,475 @@
+#Top LEETCODE Challenges
+1. Median of Two Sorted Arrays
+2. Trapping Rain Water
+3. Largest Rectangle in Histogram
+4. First Missing Positive
+5. Merge K Sorted Lists
+6. Minimum Window Substring
+7. Sliding Window Maximum
+8. Find Median from Data Stream
+9. Longest Valid Parentheses
+
+1. Median of Two Sorted Arrays
+https://www.youtube.com/watch?v=q6IEA26hvXc
+/*Brute-force solution (Linear)*/
+/*
+// Runtime: O(m+n)
+// Extra Space: O(m+n)
+//
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int m = nums1.length;
+        int n = nums2.length;
+        int[] nums = new int[m+n];
+        int i = 0, j = 0;
+        int k = 0;
+        while (i<m && j<n) {
+            if (nums1[i]<nums2[j]) nums[k++] = nums1[i++];
+            else nums[k++] = nums2[j++];
+        }
+        for (; i<m; i++) nums[k++] = nums1[i];
+        for (; j<n; j++) nums[k++] = nums2[j];
+        if ((m+n)%2 == 0) {
+            return ((float)nums[(m+n-1)/2]+(float)nums[(m+n)/2])/(float)2;
+        } else return (float)nums[(m+n-1)/2];
+    }
+}
+*/
+/* Optimized solution (Logarithmic) */
+
+// Runtime: O(log(min(m,n)))
+// Extra Space: O(1)
+
+class Solution {
+
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int m = nums1.length;
+        int n = nums2.length;
+
+        if (m > n) {
+            return findMedianSortedArrays(nums2, nums1);
+        }
+
+        int total = m + n;
+        int half = (total + 1) / 2;
+
+        int left = 0;
+        int right = m;
+
+        var result = 0.0;
+
+        while (left <= right) {
+            int i = left + (right - left) / 2;
+            int j = half - i;
+
+            // get the four points around possible median
+            int left1 = (i > 0) ? nums1[i - 1] : Integer.MIN_VALUE;
+            int right1 = (i < m) ? nums1[i] : Integer.MAX_VALUE;
+            int left2 = (j > 0) ? nums2[j - 1] : Integer.MIN_VALUE;
+            int right2 = (j < n) ? nums2[j] : Integer.MAX_VALUE;
+
+            // partition is correct
+            if (left1 <= right2 && left2 <= right1) {
+                // even
+                if (total % 2 == 0) {
+                    result =
+                        (Math.max(left1, left2) + Math.min(right1, right2)) /
+                        2.0;
+                    // odd
+                } else {
+                    result = Math.max(left1, left2);
+                }
+                break;
+            }
+            // partition is wrong (update left/right pointers)
+            else if (left1 > right2) {
+                right = i - 1;
+            } else {
+                left = i + 1;
+            }
+        }
+
+        return result;
+    }
+}
+
+
+2. Trapping Rain Water
+https://www.youtube.com/watch?v=ZI2z5pq0TqA
+class Solution {
+    public int trap(int[] heights) {
+        int left[] = new int[heights.length], right[] = new int[heights.length], max =
+            heights[0], c = 0;
+
+        for (int i = 0; i < heights.length; i++) {
+            left[i] = Math.max(heights[i], max);
+            max = left[i];
+        }
+
+        max = heights[heights.length - 1];
+        for (int i = heights.length - 1; i >= 0; i--) {
+            right[i] = Math.max(heights[i], max);
+            max = right[i];
+        }
+
+        for (int i = 0; i < heights.length; i++) {
+            c = c + Math.min(left[i], right[i]) - heights[i];
+        }
+        return c;
+    }
+}
+
+//O(1) space
+class Solution {
+    public int trap(int[] heights) {
+        if (heights.length == 0) return 0;
+
+        int l = 0, r = heights.length - 1;
+        int leftMax = heights[l], rightMax = heights[r];
+        int res = 0;
+
+        while (l < r) {
+            if (leftMax < rightMax) {
+                l++;
+                leftMax = Math.max(leftMax, heights[l]);
+                res += leftMax - heights[l];
+            } else {
+                r--;
+                rightMax = Math.max(rightMax, heights[r]);
+                res += rightMax - heights[r];
+            }
+        }
+        return res;
+    }
+}
+
+3. Largest Rectangle in Histogram
+https://www.youtube.com/watch?v=zx5Sw9130L0
+class Solution {
+    public int largestRectangleArea(int[] heights) {
+      int area = 0, n = heights.length;
+      int start;
+      Stack<Pair<Integer,Integer>> stack = new Stack<>();
+      for(int i=0;i<heights.length;i++){
+         int curHt =heights[i];
+         start = i;
+        while(!stack.isEmpty() && stack.peek().getValue() > curHt){
+          Pair<Integer,Integer> pair = stack.pop();
+          int index = pair.getKey();
+          int h = pair.getValue();
+          area = Math.max(area, h * (i - index));
+          start = index;
+        }
+        stack.push(new Pair(start,curHt));
+      }
+
+       while(!stack.isEmpty()){
+          Pair<Integer,Integer> pair = stack.pop();
+          int index = pair.getKey();
+          int h = pair.getValue();
+          area = Math.max(area, h * (n - index));
+       }
+        return area;
+    }
+
+}
+
+
+4. First Missing Positive
+https://www.youtube.com/watch?v=8g78yfzMlao
+class Solution {
+    public int firstMissingPositive(int[] nums) {
+        int n = nums.length, size = 0;
+
+        while(n > 0){
+            n = n>>1;
+            size++;
+        }
+        n = nums.length;
+        int pivot = 0;
+
+
+        for(int i = 0; i < n; i++){
+            if(nums[i] <= 0 || nums[i] > n){
+                int temp = nums[i];
+                nums[i] = nums[pivot];
+                nums[pivot] = temp;
+                pivot++;
+            }
+        }
+        for(int i= 0; i < pivot; i++)
+            nums[i] = 0;
+        for(int i= pivot; i < n; i++){
+            nums[(nums[i] - 1)&((1<<size) - 1)] |= (1<<size);
+        }
+        for(int i= 0; i < n; i++)
+            if((nums[i] & (1<<size)) == 0)
+                return i+1;
+        return n+1;
+    }
+}
+
+5. Merge K Sorted Lists
+https://www.youtube.com/watch?v=q5a5OiGbT6Q
+//  Solution using Min Heap
+//  Time Complexity:         O(n*log(k))
+//  Extra Space Complexity:  O(k)
+
+class Solution1 {
+
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists == null || lists.length == 0) {
+            return null;
+        }
+
+        PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) -> a.val - b.val);
+        for (ListNode node : lists) {
+            if (node != null) {
+                queue.offer(node);
+            }
+        }
+
+        ListNode dummy = new ListNode(0);
+        ListNode current = dummy;
+
+        while (!queue.isEmpty()) {
+            ListNode node = queue.poll();
+            current.next = node;
+            current = current.next;
+
+            if (node.next != null) {
+                queue.offer(node.next);
+            }
+        }
+
+        return dummy.next;
+    }
+}
+
+//  Solution using Iterative Merge Sort
+//  Time Complexity:         O(n*log(k))
+//  Extra Space Complexity:  O(1)
+
+class Solution2 {
+
+    public ListNode mergeKLists(ListNode[] lists) {
+        int size = lists.length;
+        int interval = 1;
+
+        while (interval < size) {
+            for (int i = 0; i < size - interval; i += 2 * interval) {
+                lists[i] = merge(lists[i], lists[i + interval]);
+            }
+
+            interval *= 2;
+        }
+
+        return size > 0 ? lists[0] : null;
+    }
+
+    private ListNode merge(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(0);
+        ListNode curr = dummy;
+
+        while (l1 != null && l2 != null) {
+            if (l1.val <= l2.val) {
+                curr.next = l1;
+                l1 = l1.next;
+            } else {
+                curr.next = l2;
+                l2 = l2.next;
+            }
+
+            curr = curr.next;
+        }
+
+        if (l1 != null) {
+            curr.next = l1;
+        } else {
+            curr.next = l2;
+        }
+
+        return dummy.next;
+    }
+}
+
+
+6. Minimum Window Substring
+https://www.youtube.com/watch?v=jSto0O4AJbM
+class Solution {
+
+    //sliding window
+    public String minWindow(String s, String t) {
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        for (char x : t.toCharArray()) {
+            map.put(x, map.getOrDefault(x, 0) + 1);
+        }
+
+        int matched = 0;
+        int start = 0;
+        int minLen = s.length() + 1;
+        int subStr = 0;
+        for (int endWindow = 0; endWindow < s.length(); endWindow++) {
+            char right = s.charAt(endWindow);
+            if (map.containsKey(right)) {
+                map.put(right, map.get(right) - 1);
+                if (map.get(right) == 0) matched++;
+            }
+
+            while (matched == map.size()) {
+                if (minLen > endWindow - start + 1) {
+                    minLen = endWindow - start + 1;
+                    subStr = start;
+                }
+                char deleted = s.charAt(start++);
+                if (map.containsKey(deleted)) {
+                    if (map.get(deleted) == 0) matched--;
+                    map.put(deleted, map.get(deleted) + 1);
+                }
+            }
+        }
+        return minLen > s.length() ? "" : s.substring(subStr, subStr + minLen);
+    }
+}
+
+
+7. Sliding Window Maximum
+https://www.youtube.com/watch?v=DfljaUwZsOk
+class Solution {
+
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        int[] ans = new int[nums.length - k + 1];
+        int j = 0;
+        Deque<Integer> q = new LinkedList<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (!q.isEmpty() && q.peekFirst() < i - k + 1) q.pollFirst();
+            while (!q.isEmpty() && nums[i] > nums[q.peekLast()]) q.pollLast();
+            q.offer(i);
+            if (i >= k - 1) ans[j++] = nums[q.peekFirst()];
+        }
+        return ans;
+    }
+}
+
+8. Find Median from Data Stream
+https://www.youtube.com/watch?v=itmhHWaHupI
+class MedianFinder {
+
+    private Queue<Integer> smallHeap; //small elements - maxHeap
+    private Queue<Integer> largeHeap; //large elements - minHeap
+
+    public MedianFinder() {
+        smallHeap = new PriorityQueue<>((a, b) -> b - a);
+        largeHeap = new PriorityQueue<>((a, b) -> a - b);
+    }
+
+    public void addNum(int num) {
+        smallHeap.add(num);
+        if (
+            smallHeap.size() - largeHeap.size() > 1 ||
+            !largeHeap.isEmpty() &&
+            smallHeap.peek() > largeHeap.peek()
+        ) {
+            largeHeap.add(smallHeap.poll());
+        }
+        if (largeHeap.size() - smallHeap.size() > 1) {
+            smallHeap.add(largeHeap.poll());
+        }
+    }
+
+    public double findMedian() {
+        if (smallHeap.size() == largeHeap.size()) {
+            return (double) (largeHeap.peek() + smallHeap.peek()) / 2;
+        } else if (smallHeap.size() > largeHeap.size()) {
+            return (double) smallHeap.peek();
+        } else {
+            return (double) largeHeap.peek();
+        }
+    }
+}
+/**
+ * Your MedianFinder object will be instantiated and called as such:
+ * MedianFinder obj = new MedianFinder();
+ * obj.addNum(num);
+ * double param_2 = obj.findMedian();
+ */
+
+
+9. Longest Valid Parentheses
+https://www.youtube.com/watch?v=VdQuwtEd10M
+class Solution {
+    public int longestValidParentheses(String s) {
+        Stack<Integer> st=new Stack<>();
+        st.push(-1);
+        int max=0;
+        for(int i=0;i<s.length();i++){
+
+            char c = s.charAt(i);
+
+            if(c='('){
+                st.push(i);
+            }
+            else{
+                st.pop();
+                if(st.isEmpty()){
+                    st.push(i);
+                }
+                else{
+                    int len = i - st.peek();
+                    max = Math.max(max,len);
+                }
+            }
+        }
+
+        return max;
+    }
+}
+
+class Solution {
+    public int longestValidParentheses(String s) {
+        int open = 0 , close = 0;
+        int max = 0;
+
+        // 0 -- n
+        for(int i=0;i<s.length();i++){
+            char c = s.charAt(i);
+            if(c == '('){
+                open++;
+            }
+            else{
+                close++;
+            }
+
+            if(open == close){
+                int len = open + close;
+                max = Math.max(max,len);
+            }
+            else if(close > open ){
+                open = close = 0;
+            }
+        }
+
+        open = close = 0;
+        // n -- 0
+        for(int i= s.length()-1; i>=0 ;i--){
+            char c = s.charAt(i);
+            if(c == '('){
+                open++;
+            }
+            else{
+                close++;
+            }
+
+            if(open == close){
+                int len = open + close;
+                max = Math.max(max,len);
+            }
+            else if(open > close ){
+                open = close = 0;
+            }
+        }
+
+        return max;
+    }
+}
