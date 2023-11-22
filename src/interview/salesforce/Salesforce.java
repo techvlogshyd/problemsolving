@@ -60,6 +60,9 @@ step1:  1 + 1  = 2
         Sum = sum * 2;
 remainingSteps = target - sum; 12 - 8 = 4
         Return counter + 1;
+   1. DS and Algo
+   2. Automation And Testing
+   3. Java OOPS
 * */
 public class Salesforce {
     public static void main(String[] args) {
