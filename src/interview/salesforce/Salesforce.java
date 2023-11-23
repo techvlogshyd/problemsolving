@@ -63,6 +63,8 @@ remainingSteps = target - sum; 12 - 8 = 4
    1. DS and Algo
    2. Automation And Testing
    3. Java OOPS
+   Given a binary search tree and a sum, write a function that returns all paths such that all nodes in that path add up to the supplied sum.
+   You have a large text file containing words. Given any two words, find the shortest distance (in terms of number of words) between them in the file
 * */
 public class Salesforce {
     public static void main(String[] args) {
