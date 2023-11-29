@@ -1,0 +1,6 @@
+1. Framework flow
+2. Broken links in a page
+3. Waits in selenium
+4. Web table reading
+5. Test cases for an application which allows new Customer 15% Existing + loyalty 10% Coupon 20% discounts
+6.
