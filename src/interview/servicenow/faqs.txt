@@ -1,0 +1,149 @@
+Java Programs
+1. Program to print the duplicate elements of an array
+arr = (1, 2, 3, 4, 2, 7, 8, 8, 3)
+
+2. Program to check if any number is a magic number or not. A number is said to be a magic number if after doing sum of digits in each step
+and inturn doing sum of digits of that sum, the ultimate result (when there is only one digit left) is 1.
+For ex-1234
+1+2+3+4 = 10
+1+0=1
+
+3. Given an unsorted array arr[] of size N having both negative and positive integers.
+The task is place all negative element at the end of array without changing the order of positive element and negative element.
+Example 1:
+Input:
+N=8
+arr[i] = [1, -1, 3, 2, -7, -5, 11, 6]
+Output:
+1 3 2 11 6 -1 -7 -5
+
+4. Write a Java program to check whether a given number is an ugly number. ugly numbers are positive numbers whose only prime
+factors are 2, 3 or 5. First 10 ugly numbers are 1, 2, 3, 4, 5, 6, 8, 9, 10, 12. By convention, 1 is included.
+Test Data input an integer number 235
+Expected Output:
+It is not an ugly number.
+
+5. Write a program in Java to display n terms of natural numbers and their sum. Go to the editor
+Test Data
+Input the number: 2
+Expected Output :
+Input number:
+2
+The first n natural numbers are :
+2
+1
+2
+The Sum of Natural Number up to n terms:
+23
+
+6. Find the maximum number in each row and perform addition on max numbers
+Input:
+3
+7 4
+2 4 6
+8 5 9 3
+Output: 25
+Explanation: 3 + 7 + 6 + 9 = 25
+
+7. Java Program to find maximum and minimum occurring character in a string.
+
+8. Java Program to find all subsets of a string
+
+9. Given a boolean 2D array of n x m dimensions where each row is sorted.
+Find the 0-based index of the first row that has the maximum number of 1's.
+Example 1:
+Input:
+N=4, M= 4
+Arr[][] = (
+(0, 1, 1, 1),
+(0, 0, 1, 1),
+(1, 1, 1, 1),
+(0, 0, 0, 0))
+Output: 2
+
+10. Write a Java program that accepts three numbers and prints "All numbers are equal" if all three numbers are equal, "All numbers are different"
+if all three numbers are different and "Neither all are equal or different" otherwise.
+Test Data
+Input first number: 2564
+Input second number: 3526
+Input third number: 2456
+Expected Output:
+All numbers are different
+
+11. Write a Java Program to find the duplicate characters in a string.
+
+12. Given an array A of size N of integers. Your task is to find the minimum and maximum elements in the array
+Example 1:
+Input:
+N= 6
+A[] = (3, 2, 1, 56, 10000, 167)
+Output:
+min = 1, max = 10000
+
+13. Write a program in Java to display the n terms of odd natural number and their sum
+Input number of terms is: 5
+Expected Output:
+The odd numbers are:
+1
+3
+5
+7
+9
+The Sum of odd Natural Number upto 5 terms is: 25
+
+14. Write a Java program to find the number of days in a month.
+Input a month number: 2
+Input a year: 2016
+
+15. Length of the longest substring without repeating characters
+    Input: "ABCDEFGABEF"
+    Output: 6 (The longest substring without repeating characters are "BDEFGA" and
+    "DEFGAB", with length 6)
+    Input: "GEEKSFORGEEKS"
+    Output: 7 (The longest substring without repeating characters are ????KSFORG and "KSFORGE", with length 7)
+
+16. Java Program to find maximum and minimum occurring character in a string.
+
+17. Java program to find duplicate char in string using Hasmap
+
+18. Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+    (1,3,5,6} target = 5
+
+19. Find the longest common prefix string amongst an array of strings.
+    Input: strs = ["flower",
+    , "flow", "flight"|Output: "f"
+    If there is no common prefix, return an empty string".
+
+ 20. Minimum and maximum elements in the array
+
+ 21. Find the 2 most frequent numbers in the array sample input (1,1,2,2,2,5,5,5,5,5,5,6,7,0,1,1)
+     output (2,5)
+
+ 22. Balanced or not balanced paranthesis
+     Input: exp = "COKHI0010)"
+     Output: Balanced
+     Explanation:
+
+23. Get all the negative numbers in the array to the end of array input:- (1, 2, 3, -1,-2,-4,4,5,6,7} output - (1,2,3,4,5,6,7,-1,-2,-4}
+
+24. valid IP address consists of exactly four integers separated by single dots. Each integer is between 0 and 255 (inclusive) and cannot have leading zeros.
+• For example, "O.1.2.201" and "192.168.1,1" are valld IP addresses, but "0.011.255.245", 192.168.1.312" and 192.168@1.1" are invalid IP addresses.
+Given a string s containing only digits, return all possible valid IP addresses that can be formed by inserting dots into s. You are not allowed to reorder or remove any digits in s. You may return the valid IP addresses in any order.
+Example 1:
+Input: s = "25525511135"Output: ["255.255.11.135","255.255.111.35"]
+Example 2:
+Input: s = "0000"Output: ["0.0.0.01
+Example 3:
+Input: s = "101023" Output: ["1.0.10.23", "1.0.102.3", "10.1.0.23", "10.10.2.3", "101.0.2.3"]
+Constraints:
+• 1<= s.length <= 20
+
+
+Selenium
+1. Google Flights - Enter source, destination, departure date and return date
+    Negative scenarios for Google Flights
+
+2. Selenium - Search iphone 14 in amazon
+    Print name and its price of first 5 product results
+    Use dynamic xpaths (where args can be passed for row number) to fetch any row's name and price
+
