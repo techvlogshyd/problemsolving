@@ -2,6 +2,18 @@ Java Programs
 1. Program to print the duplicate elements of an array
 arr = (1, 2, 3, 4, 2, 7, 8, 8, 3)
 
+ public List<Integer> findDuplicates(int[] nums) {
+        List<Integer> result = new ArrayList<>();
+        for(int i = 0; i < nums.length; i++){
+            int index = Math.abs(nums[i]) - 1;
+            if(nums[index] < 0){
+                result.add(index + 1);
+            }
+            nums[index] = -nums[index];
+        }
+        return result;
+    }
+
 2. Program to check if any number is a magic number or not. A number is said to be a magic number if after doing sum of digits in each step
 and inturn doing sum of digits of that sum, the ultimate result (when there is only one digit left) is 1.
 For ex-1234
