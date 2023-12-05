@@ -167,3 +167,19 @@ Selenium
 
 4. How to exclude particular group from test run?
 
+1. Non-functional tests multi tenant (fasets)
+ accsebility, localization, multi tenant domain separation eye contrast zoom testing
+2. Junit
+3. console error
+4. Platform and CRM App
+
+////1st Round
+1. Search for mobiles under 20000
+   Read all the mobiles with sponsored link and return top 2 results
+2. Duplicate characters in given string
+3. Longest Substring Without Repeating Characters
+4. Single ton class
+5. Test Strategy
+6. Non-Functional- Accessibility
+7. Method overloading
+
