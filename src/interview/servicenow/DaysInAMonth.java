@@ -9,7 +9,6 @@ public class DaysInAMonth {
         System.out.println(daysInaMonth(2,2016));
     }
     static int daysInaMonth(int month, int year){
-        int days = 0;
         boolean isLeapYear = false;
         if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)){
             isLeapYear = true;
