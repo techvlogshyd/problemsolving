@@ -1,0 +1,60 @@
+1)Duplicate character count in a String(Using HashMap) input="Hello" output="l is repeating 2 times"
+2)Count of Duplicate Values in a Array(Using HashMap)
+3)Even or Odd Number
+4)Factorial
+5)Number of words in a string
+6)Number in String
+7)Count of Occurrence of specific character in String
+8)Prime Number or not
+9)Replace all vowels with * in a String (Input="Welcome to India" output="W*lc*m* t* *nd**)
+10)Reverse of a Number
+11)Reverse of a String without using inbuilt method
+12)Reverse of words in a String without using inbuilt method
+13)Swap without temp
+14)Swap with temp
+15)star pattern
+16)Vowels present in a string
+17)Minimum Number in a array
+18)Maximum Number in a array
+19)Fibonacci series
+20)Sum of array
+21)Write a code in java for missing number in array
+input:{1,2,3,4,5,6,7,8,10}
+output : missing number is 9
+22)Write code input:a2b3c4 ,output:aabbbcccc
+23)Make the first character of word in string as capital letter?
+input: how are you?
+output: How Are You?
+24)Input = { "Bob","ron","ram","sent"}
+Output:- 
+A= [ron,ram]
+B=[Bob]
+C=[sent]
+25) Can you write this program to move the zeros to end by placing values at initial using array
+Input: {1,0,6,9,0,5,3}
+Output : {1,6,9,5,3,0,0}
+26))Write the program using Hashmap to sort the values 
+27)Palindrome Number
+28)Java code for possible permutations input : ABC 
+29)Write a program to Print HashMap sorted values 
+30)Concatination program using array list
+31)Merge two Arrays
+32)Find out the common Arrays 
+33)Write a code for custom exceptions
+ex: vote age> 18 ,if less than 18 throw and exception
+34)Write code Using hash to group the names using first char in given list
+35)write code on Bubble sort
+36)string was given and i had perform set operation to store only unqiue character from it and then i had to use map to tell occurance of characters and sort them on basis of highest frequency first
+37)String str=123abc456xyz reverse only strings not numbers
+38)Print unique values from array
+39)print duplicate characters from string 
+40)String s= "tomorrow" o/p : // t$m$$rr$$$w
+41)String Occurance count in MAP 
+42)system.out.println('a'+'b'+ 'c'); Outputforthis
+43)what are the ways to declare a String in java?
+String s1 = "JAVA";
+String s2 = "JAVA";
+String s3 = new String("Java");
+System.out.println(s1 == s2);
+System.out.println(s1 == s3);
+System.out.println(s1.equals(s3));

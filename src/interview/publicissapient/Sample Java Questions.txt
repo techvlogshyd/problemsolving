@@ -1,0 +1,156 @@
+Questions
+-------------------------------------------------------------------------------------------------------------------
+1)Self introduction and Roles and responsibilities 
+2)OOPS concepts where you have implemented
+3)Explain all the oops concepts with examples
+4)Exceptions and type of exceptions (Custom exceptions)
+5)In what case IO exception throws and Null pointer exception
+6)Diff b/w list and map and write the code for how to add elements to list and map and type of map
+7)diff b/w Array and ArrayList and write the code to initialize the array and array list
+8)What is LIFO and FIFO (Stack and queue explained it)
+9)Two java programs  (Derived the logic for both of the code)
+1. Given a string s of value and remove the duplicate and print the index of the duplicate values 
+2. Create a hashmap and add some elements and remove any one of the element and finally print the removed elements
+10)Selenium  + TestNG +  Cucumber + GIT+ API testing
+11)Handling browser windows
+12)How many types you can select the dropdown
+@beforeTest and @beforeclass
+13)Depends on methods and priority
+14)Gherkin keywords
+15)Write a basic scenario of feature file (wrote it and given the example of step definitions and test runner file as well)
+16)Git flow starting from Git config remote add origin, git add * git commit -m "" and git push origin and how to resolve the conflicts
+17)API testing : Diff b/w 401 and 500 and 200 and 201
+18)what is Gi stash and how to put Jenkins regression run for a particular time and date
+19)Final keyword,super and this keyword 
+20)Difference btw class,abstract class and interface
+21)Reverse of a String 
+22)Merge two Arrays
+23)Find out the common Arrays 
+24)Difference between interface and abstract.
+24) What is polymorphism and their types. Explain them as you used in your project 
+25) Difference between multiple and multilevel inheritance. Is it possible to implement them in Java
+26) Can you write this program to move the zeros to end by placing values at initial using array
+Input: {1,0,6,9,0,5,3}
+Output : {1,6,9,5,3,0,0}
+27)Write the program using HashMap to sort the values 
+28)Difference between list and array list
+29)Difference between Map and HashMap 
+30)Write code for Palindrome number
+31)Write code for prime number
+32)Concatenation program using array list
+33)Java code for possible permutations input : ABC 
+34)Print HashMap sorted values 
+35)Oops concepts with examples 
+36)multiple inheritance 
+37)Static keyword 
+38)difference Throws and throw
+39)difference between List and Array List 
+40)Constructor types
+41)File reader in Java
+42)difference between == and .equals 
+43)Write a code in java for missing number in array
+input:{1,2,3,4,5,6,7,8,10}
+output : missing number is 9
+44)Reverse the words in string 
+input: How are you?
+output: woH era uoy?
+45) Make the first character of word in string as capital letter?
+input: how are you?
+output: How Are You?
+46)Write a code for custom exceptions
+ex: vote age> 18 ,if less than 18 throw and exception
+47)Difference between throw and throws
+48)Difference between Arraylist and linkedArraylist
+49)Difference between hashmap and concurrent hashmap?
+50)Difference between method overloading and method overriding
+51)Write a code ,input is given 
+input:a2b3c5 
+output -aabbbccc
+52)what is wrapper classes?
+53)What is set, map and list? and what are key features?
+54)Input = { "Bob","ron","ram","sent"}
+Output:- 
+A= [ron,ram]
+B=[Bob]
+C=[sent]
+55)Input:- Int [] arr = {1,2,4,5,6}
+Output:- missing no is :- 3
+56)Difference between abstract and interface
+57)Difference between list and set
+58)what is static
+59)What is interface
+60)Difference between array and arraylist
+61)write code on Bubble sort
+62)Write code Using hash to group the names using first char in given list
+63)difference between final, finalize and finally
+----------------------------------------------------------------
+4 years
+-----------------------------------------------------------------
+1)Reverse a string
+2)print unique values in array
+3)print duplicate characters from string 
+
+Manual:
+What is regression testing
+Diff between regression testing and retesting 
+Diff between sanity and smoke testing 
+Defect life cycle 
+Priority and severity 
+Example of priority and severity 
+
+---------------------------------
+Selenium questions 
+What is x path 
+Types of xpath 
+Gave a website and asked to write xpath for header tabs 
+Write syntax for intializing chrome driver
+Code for reading data from excel 
+What is Pom 
+Advantages of testng 
+Priorities in testng 
+What is bdd framework 
+
+Git commands you use in day to day life 
+
+------------------------------------------
+Java question 
+Reverse a string 
+Find non duplicate values in a hashmap 
+
+He gave a interger array 
+Int arr [] = {2,2,2,3,4,4,5,6,6,7}
+
+Like this 
+
+So we have to find numbers which are non repeating 
+output:3,5,7
+---------------------------------------------------
+*** JAVA ****
+1. What is constructor ?
+2. can constructor can overload and override?
+3. Can constructor be private ? Can constructor be final ?
+4. What is polymorphism and encapsulation in java , How it is implemented in your framwork
+5. What are the collection in java
+6. Types of Exception in Java (Both unchecked and checked)?
+7. Explain String bulider and String buffer ?
+8. Have you worked with File input , Explain it.
+********************************************************
+**Selenium**
+What are types of waits in selenium
+how you take screenshot in selenium
+how you handle alert
+what is switchTo defaultContent
+Types of Exception in selenium
+How you enter value in InputFiled apart from SendKeys
+what is depencies packages used for Excel read or Write operation.
+
+*****************************************************************
+**TESTNG**
+Invocation count
+Thread Count
+List the TestNG annotation in order
+Priority in TESTNG
+What is POJO class 
+
+
+
