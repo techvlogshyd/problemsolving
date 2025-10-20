@@ -150,7 +150,15 @@ Invocation count
 Thread Count
 List the TestNG annotation in order
 Priority in TESTNG
-What is POJO class 
+What is POJO class
+
+
+1. Run failed tests in Jenkins
+2. How to Mock data when service not ready
+3. Framework explanation
+4.
+
+
 
 
 
