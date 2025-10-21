@@ -12,7 +12,8 @@ import java.util.Map;
 //3.xpath for checkbox where country names starts with A and Primary language is English
 //https://cosmocode.io/automation-practice-webtable/
 //strong[starts-with(text(), 'A')]/following::td[3][text()='English']/preceding::input[1]
-//4. Assert memberName from response where  city is Delhi
+//4. Assert memberName from response where  city is Delhi - API
+//5. Handle stale element exception
 //{
 //        "members": [{
 //        "memberName": "Amit",
